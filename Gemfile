@@ -69,6 +69,9 @@ group :development, :test do
 
   # Capybara - Features tests to RSpec - https://github.com/teamcapybara/capybara
   gem "capybara"
+
+  # Selenium - webdriver to RSpec - https://github.com/SeleniumHQ/selenium
+  gem "selenium-webdriver"
 end
 
 group :development do
