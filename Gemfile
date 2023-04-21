@@ -66,6 +66,9 @@ group :development, :test do
 
   # Linter - Rubocop - https://github.com/rubocop/rubocop-rails
   gem "rubocop-rails", "~> 2.19.1"
+
+  # Capybara - Features tests to RSpec - https://github.com/teamcapybara/capybara
+  gem "capybara"
 end
 
 group :development do
