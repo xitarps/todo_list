@@ -20,6 +20,10 @@ Bundler.require(*Rails.groups)
 
 module Listinha
   class Application < Rails::Application
+    config.i18n.load_path += Dir["#{Rails.root.to_s}/config/locales/**/*.{rb,yml}"]
+    config.i18n.default_locale = :'pt-BR'
+    config.time_zone = 'America/Fortaleza'
+
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
