@@ -54,6 +54,9 @@ group :development, :test do
 
   # RSpec - tests - https://github.com/rspec/rspec-rails
   gem "rspec-rails", "~> 6.0"
+
+  # SimpleCov - test coverage - https://github.com/simplecov-ruby/simplecov
+  gem "simplecov", "~> 0.22.0"
 end
 
 group :development do
