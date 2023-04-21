@@ -59,7 +59,7 @@ group :development, :test do
   gem "simplecov", "~> 0.22.0"
 
   # Linter - Rubocop - https://github.com/rubocop/rubocop-rails
-  gem "rubocop-rails", "~> 1.50.2"
+  gem "rubocop-rails", "~> 2.19.1"
 end
 
 group :development do
