@@ -1,0 +1,5 @@
+pt-BR:
+  shared:
+    navbar:
+      tasks: Tarefas
+      login: Logar

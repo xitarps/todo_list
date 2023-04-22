@@ -1,0 +1,8 @@
+<h2><%= t('.tasks') %></h2>
+<p>
+  <%= link_to t('.new_task'), new_task_path %>
+</p>
+
+<div id="tasks">
+  <%= render @tasks %>
+</div>

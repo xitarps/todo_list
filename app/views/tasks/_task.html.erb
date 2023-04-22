@@ -1,0 +1,21 @@
+<p>
+  <%= task.id %> | 
+  <%= task.title %> | 
+  <% if action_name == 'index' %>
+    <%= task.description.truncate(5) %> | 
+  <% elsif action_name == 'show' %>
+    <%= task.description %> | 
+  <% end %>
+
+  <br>
+
+  <%= link_to t('details'), task %>
+
+  <% if current_user.tasks.include? task %>
+   | 
+    <%= link_to t('edit'), edit_task_path(task) %> | 
+    <%= link_to t('destroy'), task_path(task), data: { 'turbo-method': :delete } %>
+  <% end %>
+</p>
+
+<hr>
