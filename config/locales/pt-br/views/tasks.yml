@@ -3,6 +3,8 @@ pt-BR:
     index:
       tasks: Tarefas
       new_task: Nova Tarefa
+      search: Busca
+      do_search: Buscar
     show:
       task_detail: Detalhes da tarefa
     new:

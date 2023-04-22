@@ -37,6 +37,12 @@ class TasksController < ApplicationController
     redirect_to tasks_path, notice: 'Apagado com sucesso' if @task.destroy
   end
 
+  def search
+    @tasks = Task.search(params[:search_term])
+
+    render :index
+  end
+
   private
 
   def task_params

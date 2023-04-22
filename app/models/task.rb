@@ -5,4 +5,10 @@ class Task < ApplicationRecord
   belongs_to :user
 
   validates :title, :description, presence: true
+
+  scope :search, ->(term) {
+    joins(:categories).where(
+      'title ILIKE :query OR description ILIKE :query', query: "%#{term}%"
+    ).or(where('categories.name ILIKE :query', query: "%#{term}%"))
+  }
 end
