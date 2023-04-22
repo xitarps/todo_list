@@ -7,6 +7,11 @@
     <%= task.description %> | 
   <% end %>
 
+  <% if action_name == 'show' %>
+    <%= t('.categories') %>:
+    <%= task.categories.pluck(:name).to_sentence%>
+  <% end %>
+
   <br>
 
   <%= link_to t('details'), task %>
