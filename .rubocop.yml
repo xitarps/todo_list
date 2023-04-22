@@ -238,7 +238,7 @@ Rails/I18nLazyLookup: # new in 2.14
 Rails/I18nLocaleAssignment: # new in 2.11
   Enabled: true
 Rails/I18nLocaleTexts: # new in 2.14
-  Enabled: true
+  Enabled: false
 Rails/Inquiry: # new in 2.7
   Enabled: true
 Rails/MailerName: # new in 2.7

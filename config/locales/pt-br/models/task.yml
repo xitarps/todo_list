@@ -1,0 +1,6 @@
+pt-BR:
+  activerecord:
+    attributes:
+      task:
+        title: Título
+        description: Descrição
