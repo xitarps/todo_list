@@ -25,5 +25,30 @@ describe 'User' do
       expect(page).to have_content('comprar açucar')
       expect(page).to have_content('comprar muito açucar')
     end
+    it 'not be able to see tasks when not signed in' do
+      # Arranje
+      User.create(email: 'tester@tester.com', password: 'tester123').save
+      Task.create(title: 'comprar açucar', description: 'comprar muito açucar', user_id: User.last.id)
+
+      # Act
+      visit '/'
+
+      # Assert
+      expect(page).not_to have_content('Tarefas')
+      expect(page).to have_content('Login')
+    end
+
+    it 'not be able to see tasks index when not signed in' do
+      # Arranje
+      User.create(email: 'tester@tester.com', password: 'tester123').save
+      Task.create(title: 'comprar açucar', description: 'comprar muito açucar', user_id: User.last.id)
+
+      # Act
+      visit tasks_path
+
+      # Assert
+      expect(page).not_to have_content('Tarefas')
+      expect(page).to have_content('Login')
+    end
   end
 end

@@ -6,9 +6,16 @@
   <% elsif action_name == 'show' %>
     <%= task.description %> | 
   <% end %>
+
   <br>
-  <%= link_to 'Detalhes', task %> | 
-  <%= link_to 'Editar', edit_task_path(task) %> | 
-  <%= link_to 'Apagar', task_path(task), data: { 'turbo-method': :delete } %>
+
+  <%= link_to 'Detalhes', task %>
+
+  <% if current_user.tasks.include? task %>
+   | 
+    <%= link_to 'Editar', edit_task_path(task) %> | 
+    <%= link_to 'Apagar', task_path(task), data: { 'turbo-method': :delete } %>
+  <% end %>
 </p>
+
 <hr>
