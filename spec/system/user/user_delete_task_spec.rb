@@ -2,12 +2,12 @@ require 'rails_helper'
 
 describe 'User' do
   before(:each) { Task.destroy_all }
-  let(:task) { Task.create(title: 'comprar açucar', description: 'comprar muito açucar') }
+  before(:each) { User.destroy_all }
   context 'delete task' do
     it 'when exists' do
       # Arranje
-      task
-      User.create(email: 'tester@tester.com', password: 'tester123')
+      User.create(email: 'tester@tester.com', password: 'tester123').save
+      Task.create(title: 'comprar açucar', description: 'comprar muito açucar', user_id: User.last.id)
 
       # Act
       visit '/'

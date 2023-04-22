@@ -2,10 +2,11 @@ require 'rails_helper'
 
 describe 'User' do
   before(:each) { Task.destroy_all }
+  before(:each) { User.destroy_all }
   context 'create task' do
     it 'when with title and description' do
       # Arranje
-      User.create(email: 'tester@tester.com', password: 'tester123')
+      User.create(email: 'tester@tester.com', password: 'tester123').save
 
       # Act
       visit '/'
