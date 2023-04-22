@@ -3,6 +3,15 @@
   <%= link_to t('.new_task'), new_task_path %>
 </p>
 
+<div>
+  <%= form_with url: search_tasks_path, data: { turbo: :false }, method: :get do |f| %>
+    <%= f.label :search_term, t('.search') %>
+    <%= f.text_field :search_term%>
+
+    <%= f.submit t('.do_search') %>
+  <% end %>
+</div>
+
 <div id="tasks">
   <%= render @tasks %>
 </div>

@@ -324,6 +324,8 @@ Style/DirEmpty: # new in 1.48
   Enabled: true
 Style/FileEmpty: # new in 1.48
   Enabled: true
+Style/Lambda:
+  Enabled: false
 Style/MapToSet: # new in 1.42
   Enabled: true
 Style/MinMaxComparison: # new in 1.42
