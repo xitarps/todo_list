@@ -11,3 +11,6 @@ pt-BR:
       edit_task: Editar Tarefa
     form:
       save: Salvar
+      categories: Categorias
+    task:
+      categories: Categorias
