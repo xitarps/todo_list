@@ -11,7 +11,7 @@ describe 'User' do
 
       # Act
       visit '/'
-      click_on 'Login'
+      click_on 'Logar'
       fill_in 'Email',	with: 'tester@tester.com'
       fill_in 'Password',	with: 'tester123'
       click_on 'Log in'

@@ -1,0 +1,13 @@
+pt-BR:
+  tasks:
+    index:
+      tasks: Tarefas
+      new_task: Nova Tarefa
+    show:
+      task_detail: Detalhes da tarefa
+    new:
+      new_task: Nova Tarefa
+    edit:
+      edit_task: Editar Tarefa
+    form:
+      save: Salvar

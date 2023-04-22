@@ -11,7 +11,7 @@ describe 'User' do
 
       # Act
       visit '/'
-      click_on 'Login'
+      click_on 'Logar'
       fill_in 'Email',	with: 'tester@tester.com'
       fill_in 'Password',	with: 'tester123'
       click_on 'Log in'
@@ -35,7 +35,7 @@ describe 'User' do
 
       # Assert
       expect(page).not_to have_content('Tarefas')
-      expect(page).to have_content('Login')
+      expect(page).to have_content('Logar')
     end
 
     it 'not be able to see tasks index when not signed in' do
@@ -48,7 +48,7 @@ describe 'User' do
 
       # Assert
       expect(page).not_to have_content('Tarefas')
-      expect(page).to have_content('Login')
+      expect(page).to have_content('Logar')
     end
   end
 end

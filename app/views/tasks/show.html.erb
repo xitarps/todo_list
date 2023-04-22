@@ -1,5 +1,5 @@
-<h2>Detalhes da tarefa</h2>
-<h3>Tarefa #<%= @task.id %></h3>
+<h2><%= t('.task_detail') %></h2>
+<h3><%= @task.model_name.human %> #<%= @task.id %></h3>
 
 <p>
   <%= render @task %>

@@ -1,8 +1,10 @@
 pt-BR:
+  welcome: 'Bem vindo(a)'
   edit: 'Editar'
   new: 'Criar'
   destroy: 'Apagar'
   show: 'Detalhes de '
+  details: Detalhes
   search: 'Busca'
   activerecord:
     successful:

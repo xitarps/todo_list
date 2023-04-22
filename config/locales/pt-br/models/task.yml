@@ -1,5 +1,7 @@
 pt-BR:
   activerecord:
+    models:
+      task: Tarefa
     attributes:
       task:
         title: Título

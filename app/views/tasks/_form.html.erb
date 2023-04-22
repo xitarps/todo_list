@@ -2,14 +2,14 @@
 
 <%= form_with model: @task, data: { turbo: false } do |f| %>
   <p>
-    <%= f.label :title, "Título" %>
+    <%= f.label :title, Task.human_attribute_name(:title) %>
     <%= f.text_field :title %>
   </p>
   <p>
-    <%= f.label :description, "Descrição" %>
+    <%= f.label :description, Task.human_attribute_name(:description) %>
     <%= f.text_area :description %>
   </p>
   <p>
-    <%= f.submit 'Salvar' %>
+    <%= f.submit t('.save') %>
   </p>
 <% end %>
